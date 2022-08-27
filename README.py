@@ -42,6 +42,7 @@ def mod_complejos(x):
         real=n[0]*math.cos(n[1])
         imaginaria =n[0]*math.sin(n[1])
         return (real,imaginaria)
+    
 """Retornar la fase de un número complejo"""
 
 def fas_complejo(n1):
