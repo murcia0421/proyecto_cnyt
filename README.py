@@ -1,4 +1,6 @@
-# proyecto_cnyt
+"""proyecto_cnyt"""
+"""Juan Daniel Murcia Sanchez"""
+
 import math
 """suma de complejos"""
 
