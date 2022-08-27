@@ -23,8 +23,8 @@ def rest_complejos(n1,n2):
  
 def div_complejos(x,y):
         real=((x[0]*y[0])+(x[1]*y[1]))/((x[0]**2)+(y[1]**2))
-        imaginaria=((y[0]*x[1])-(x[0]*y[1]))/((y[0]**2)+(y[1]**2))
-        return (real,imaginaria)
+        imaginario=((y[0]*x[1])-(x[0]*y[1]))/((y[0]**2)+(y[1]**2))
+        return (real,imaginario)
       
 """Modulo de un complejo"""
 
@@ -40,8 +40,8 @@ def mod_complejos(x):
 
  def pol_catersiano(n):
         real=n[0]*math.cos(n[1])
-        imaginaria =n[0]*math.sin(n[1])
-        return (real,imaginaria)
+        imaginario =n[0]*math.sin(n[1])
+        return (real,imaginario)
     
 """Retornar la fase de un número complejo"""
 
