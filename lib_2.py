@@ -9,36 +9,36 @@ import math
 
 def inverso_vector(v):
   num =len(v)
-  a =[(0,0] * num]
+  rta =[(0,0] * num]
   i = 0
   while i in range(num):
-    a[i] = README.producto_complejos((-1,0),v[i])
+    rta[i] = README.producto_complejos((-1,0),v[i])
     i = i + 1
-  return a
+  return rta
  
 """Multiplicación de un escalar por un vector complejo."""
 
 def mult_escalar(v):
   
-  a = int(input("Digite el numero escalar ")
+  r = int(input("Digite el numero escalar ")
   fila = [(0,0)] * len(v[0])
   multiplicacion = [fila] * len(v)
   for i in range(len(v)):
     multiplicacion[i] = [(0,0)] * len(v[0])
     for j in range(len(v[0])):
-      multiplicacion[i][j] = README.producto_complejos((a,0), v[i][j])
+      multiplicacion[i][j] = README.producto_complejos((r,0), v[i][j])
   return multiplicacion
                                                 
 """Adición de matrices complejas."""
        
 def adicionmat(m1, m2):
-  a = len(m1)
-  b = len(m1[0])
-  fila = [(0,0] * b
-  suma = [fila] * a
-  for i in range(a):
-    suma[i] = [(0,0)] * b
-    for j in range(b):
+  q = len(m1)
+  w = len(m1[0])
+  fila = [(0,0] * w
+  suma = [fila] * q
+  for i in range(q):
+    suma[i] = [(0,0)] * w
+    for j in range(w):
       suma[i][j] = README.sum_complejos(m1[i][j],m2[i][j])
   return suma  
            
@@ -101,7 +101,6 @@ def adicion_matrices_complejas(m1, m2):
 """Función para calcular la "acción" de una matriz sobre un vector."""
            
 def accion(m,v):
-    f =  len(m)
     a = [(0,0)] * len(m)
     for i in range(len(m)):
         for j in range(len(m)):   
@@ -112,11 +111,11 @@ def accion(m,v):
            
 def producto_interno(v1,v2):
     num = len(v1)
-    a = (0,0)
-    b = [(0,0)] * num 
+    q = (0,0)
+    w = [(0,0)] * num 
     for i in range (num):
-        b[i] = README.producto_complejos(README.conjugado(v1[i]),v2[i]) 
-        a = README.sum_complejos(b[i],a)
+        w[i] = README.producto_complejos(README.conjugado(v1[i]),v2[i]) 
+        q = README.sum_complejos(w[i],q)
     return (x)           
            
 """Norma de un vector"""
@@ -129,8 +128,8 @@ def norma_v(v_c1):
            
 def mc_es_unitaria(m_c1):
     if len(m_c1) == len(m_c1[0]):
-        a = adjunta(m_c1)
-        aux = producto_matricial(m_c1, a)
+        m = adjunta(m_c1)
+        aux = producto_matricial(m_c1, m)
         identidad = matriz_identidad(len(m_c1))
         for i in range(len(mc_1)):
             for j in range(len(mc_1)):
